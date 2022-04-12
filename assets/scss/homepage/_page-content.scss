@@ -82,7 +82,9 @@
         }
         
         @at-root
-        &__sidebar-content {
+        &__sidebar{
+            @at-root
+            &__content {
 
             span {
                 @include mg-rule(top,12px);
@@ -101,13 +103,33 @@
                 @include mg-rule(top,14px);
                 color: map-get($colors,light-green);
                 font-size: map-get($font,font-xvii);
+                text-decoration: underline;
             }
 
             p {
-                @include mg-rule(top,18px);
+                @include mg_values(18px,0,19px,0);
                 font-size: map-get($font,font-xiv);
                 font-weight: bold;
             }
-    
+            
+            @at-root
+            .page-content-details {
+                @include pd_values(0,6%);
+                background-color: map-get($colors,primary_color);
+            }
+
+            @at-root
+            &__video-box {
+                position: relative;
+                .play-button {
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
         }
     }
+}
