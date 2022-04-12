@@ -49,7 +49,7 @@
             }
             h2 {
                 @include pd_values(0,1.8%);
-                @include mg-rule(top,55px);
+                @include mg-rule(top,52px);
                 color: map-get($colors,dark-green);
                 font-size: map-get($font,font-xxxiv);
                 font-weight: bold;
@@ -124,11 +124,13 @@
         
         @at-root
         &__sidebar{
+            @include flex_properties(normal,normal);
+            flex-direction: column;
+            row-gap: 28px;
             @at-root
             &__content {
 
             span {
-                @include mg-rule(top,12px);
                 display: block;
                 font-weight: bold;
             }
@@ -156,13 +158,15 @@
             }
             p {
                 @include mg_values(18px,0,19px,0);
+                color: map-get($colors,faint_black);
                 font-size: map-get($font,font-xiv);
                 font-weight: bold;
+                line-height: 20px;
             }
             
             @at-root
             .page-content-details {
-                @include pd_values(0,6%);
+                @include pd_values4(5%,6%,0.4%,6%);
                 background-color: map-get($colors,primary_color);
             }
 
