@@ -32,9 +32,11 @@ header {
                         @include pd_values(2.9%,5.2%);
                         position: relative;
                         text-align: center;
+                        @include transition-effect();
                   & > a {
                         color: map-get($colors,lightest-white);
                         font-size: map-get($font,font-xix);
+                        @include transition-effect();
                     }
                     &:nth-of-type(2n) > a::after {
                         @include font-iconafter("\f107",20px);
@@ -66,7 +68,9 @@ header {
                         top: 100%;
                         background: map-get($colors,black_color);
                         li {
+                            @include transition-effect();
                             a {
+                                @include transition-effect();
                                 color: map-get($colors,lightest-white);
                                 font-size: 12px;
                                 white-space: nowrap;
@@ -137,6 +141,11 @@ header {
             }
             span {
                 text-decoration: underline;
+                cursor: pointer;
+                @include transition-effect();
+                &:hover {
+                    @include hover-effect();
+                }
             }
         }
         @at-root

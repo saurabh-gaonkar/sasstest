@@ -16,7 +16,15 @@
             }
             @at-root
             &__play-video {
-                display: none;
+                width: 30%;
+                height: 50%;
+                border-radius: 50%;
+                position: fixed;
+                z-index: 3;
+                top: 50%;
+                left: 50%;
+                // display: none;
+                transform: translate(-50%,-50%);
             }
 
             @at-root 
@@ -66,7 +74,12 @@
                             border-radius: 100%;
                             background-color: map-get($colors,icons-back);
                             color: map-get($colors,primary_color);
+                            @include transition-effect();
                         }
+                        &:hover:before {
+                            @include hover-effect();
+                        }
+                      
                     }
                     &:nth-child(2) a::before {
                         content: "\f0e1";
@@ -88,6 +101,18 @@
                     width: 80%;
                 }
             }
+        }
+
+        @at-root
+        .modal-background {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            // display: none;
+            background-color: map-get($colors,light-black);
         }
         
         @at-root
@@ -111,8 +136,13 @@
             a {
                 @include mg-rule(top,14px);
                 color: map-get($colors,light-green);
-                font-size: map-get($font,font-xvii);
+                font-size: map-get($font,font-xviii);
+                line-height: 24px;
                 text-decoration: underline;
+                @include transition-effect();
+                &:hover {
+                    @include hover-effect();
+                }
             }
 
             p {

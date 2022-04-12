@@ -1,4 +1,5 @@
 footer {
+    @include pd_values(1.2%,0);
     background-color: map-get($colors,black_color );
     @at-root
     .footer-menus {
@@ -10,9 +11,16 @@ footer {
                 color: map-get($colors,lightest-white);
                 font-size: map-get($font,font-xviii);
                 &:hover {
-                    @include hover-effect();
+                    color: map-get($colors,primary_color);
                 }
             }
         }
+    }
+
+    @at-root
+    .copyright {
+        @include mg-rule(top,12px);
+        color: map-get($colors,lighter-white);
+        font-size: map-get($font,font-xviii);
     }
 }
