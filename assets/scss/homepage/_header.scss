@@ -37,12 +37,18 @@ header {
                         color: map-get($colors,lightest-white);
                         font-size: map-get($font,font-xix);
                         @include transition-effect();
+                        @include reverse_breakpoint("tablet") {
+                            color: map-get($colors,primary_color);
+                        }
                     }
                     &:nth-of-type(2n) > a::after {
                         @include font-iconafter("\f107",20px);
                         @include mg-rule(left,2px);
                         font-weight: bold;
                         vertical-align: middle;
+                        @include reverse_breakpoint("tablet") {
+                            content: "";
+                        }
                     }
                     &:first-child {
                         @include mg-rule(right,4.5%);
@@ -58,6 +64,9 @@ header {
                     &:nth-child(3) {
                         @include mg-rule(right,4.2%);
                         white-space: nowrap;
+                    }
+                    &:last-child a::after {
+                        @include mg-rule(left,4px);
                     }
                     @at-root
                     .dropdown-menus {
@@ -80,7 +89,7 @@ header {
                                 &:hover {
                                     color: map-get($colors,primary_color);
                                     @include reverse_breakpoint("tablet") {
-                                        color: map-get($colors,lightest-white);
+                                        color: map-get($colors,primary_color);
                                     }
                                 }
                             }
@@ -91,11 +100,14 @@ header {
                         background-color: map-get($colors,red-color);
                         & > a {
                             color: map-get($colors,lighter-white);
+                            @include reverse_breakpoint("tablet") {
+                                color: map-get($colors,primary_color);
+                            }
                         }
                         @include reverse_breakpoint("tablet") {
                             background-color: map-get($colors,transparent);
                             & > a {
-                                color: map-get($colors,lightest-white);
+                                color: map-get($colors,primary_color);
                             }
                         }
                     }
@@ -145,6 +157,9 @@ header {
                 @include transition-effect();
                 &:hover {
                     @include hover-effect();
+                    @include reverse_breakpoint("tablet") {
+                        color: map-get($colors,black_color);
+                    }
                 }
             }
         }

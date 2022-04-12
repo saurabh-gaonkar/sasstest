@@ -6,6 +6,13 @@
         font-size: map-get($font,font-xviii);
         font-weight: bold;
         text-decoration: underline;
+        @include transition-effect();
+        &:hover {
+            @include hover-effect();
+            @include reverse_breakpoint("tablet") {
+                color: map-get($colors,dark-green);
+            }
+        }
     }
     @at-root
     &__hamburger {

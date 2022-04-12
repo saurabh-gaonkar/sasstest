@@ -13,7 +13,19 @@ footer {
                 &:hover {
                     color: map-get($colors,primary_color);
                 }
+                @include reverse_breakpoint("pc") {
+                    font-size: map-get($font,font-xvi);
+                }
+                @include reverse_breakpoint("tablet") {
+                    font-size: map-get($font,font-x);
+                }
             }
+        }
+        @include reverse_breakpoint("large-pc") {
+            width: 72%;
+        }
+        @include reverse_breakpoint("tablet") {
+            width: 100%;
         }
     }
 
@@ -22,5 +34,9 @@ footer {
         @include mg-rule(top,12px);
         color: map-get($colors,lighter-white);
         font-size: map-get($font,font-xviii);
+        @include reverse_breakpoint("tablet") {
+            font-size: map-get($font,font-xii);
+        }
     }
+
 }

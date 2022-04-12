@@ -4,6 +4,7 @@
     column-gap: 25px;
         @at-root
         &__taking-the-lead {
+            background-color: map-get($colors,primary_color);
             @at-root
             &__video {
                 figure {
@@ -50,7 +51,7 @@
                 @include pd_values(0,1.8%);
                 @include mg-rule(top,55px);
                 color: map-get($colors,dark-green);
-                font-size: map-get($font,font-xxxii);
+                font-size: map-get($font,font-xxxiv);
                 font-weight: bold;
             }
 
@@ -65,7 +66,7 @@
             @at-root 
             .social {
                 width: 22.1%;
-                @include mg_values(4.6%,1.8%,0,auto);
+                @include mg_values(5%,2.3%,0,auto);
                 @include flex_properties(space-between,center);
                 li {
                     a {
@@ -81,6 +82,9 @@
                         }
                         &:hover:before {
                             @include hover-effect();
+                            @include reverse_breakpoint("tablet") {
+                                color: map-get($colors,primary_color);
+                            }
                         }
                       
                     }
@@ -145,9 +149,11 @@
                 @include transition-effect();
                 &:hover {
                     @include hover-effect();
+                    @include reverse_breakpoint("tablet") {
+                        color: map-get($colors,light-green);
+                    }
                 }
             }
-
             p {
                 @include mg_values(18px,0,19px,0);
                 font-size: map-get($font,font-xiv);
