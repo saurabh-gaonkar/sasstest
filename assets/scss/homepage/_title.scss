@@ -1,0 +1,22 @@
+.title-section {
+    @include flex_properties(space-between,center);
+    a {
+        @include mg-rule(bottom,0.8%);
+        color: map-get($colors,dark-green);
+        font-size: map-get($font,font-xviii);
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    @at-root
+    &__hamburger {
+        text-indent: -9999px;
+        &::before {
+            @include pd_values(29%,40%);
+            @include font-icon("\f0c9",20px);
+            background-color: map-get($colors,black_color);
+            color: map-get($colors,primary_color);
+            font-size: map-get($font,font-xxxvi);
+        }
+    }
+
+}

@@ -305,6 +305,10 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media screen and (max-width: 768px) {
+      .header-bottom .wrapper {
+        flex-direction: column;
+        row-gap: 10px; } }
   .header-bottom__advertisement-feature {
     font-weight: bold;
     white-space: nowrap; }
@@ -324,7 +328,37 @@ li {
     align-items: center;
     flex-basis: 22.7%; }
     .header-bottom__sponsors-logo span {
-      font-weight: bold; }
+      font-weight: bold;
+      white-space: nowrap; }
     .header-bottom__sponsors-logo h1 a img {
       width: 135px;
       height: 40px; }
+
+main {
+  padding: 1.5% 0;
+  background-color: #F6F6F6; }
+
+.title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .title-section a {
+    margin-bottom: 0.8%;
+    color: #286D84;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline; }
+  .title-section__hamburger {
+    text-indent: -9999px; }
+    .title-section__hamburger::before {
+      padding: 29% 40%;
+      content: "";
+      float: right;
+      font-family: "fontAwesome";
+      font-size: 20px;
+      text-indent: 0;
+      background-color: #000;
+      color: #fff;
+      font-size: 36px; }

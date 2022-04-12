@@ -120,6 +120,10 @@ header {
         @include pd_values(1.2%,0);
         .wrapper {
             @include flex_properties(space-between,center);
+            @include reverse_breakpoint("tablet") {
+                flex-direction: column;
+                row-gap: 10px;
+            }
         }
 
         @at-root
@@ -141,6 +145,7 @@ header {
             flex-basis: 22.7%;
             span {
                 font-weight: bold;
+                white-space: nowrap;
             }
             h1 {
                 a {
