@@ -13,6 +13,9 @@ footer {
                 font-size: map-get($font,font-xviii);
                 &:hover {
                     color: map-get($colors,primary_color);
+                    @include reverse_breakpoint("tablet") {
+                        color: map-get($colors,lightest-white);
+                    }
                 }
                 @include reverse_breakpoint("pc") {
                     font-size: map-get($font,font-xvi);
