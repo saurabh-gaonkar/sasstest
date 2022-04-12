@@ -1,0 +1,18 @@
+footer {
+    background-color: map-get($colors,black_color );
+    @at-root
+    .footer-menus {
+        @include flex_properties(space-between,center);
+        width: 54%;
+        margin-left: 1%;
+        li {
+            a {
+                color: map-get($colors,lightest-white);
+                font-size: map-get($font,font-xviii);
+                &:hover {
+                    @include hover-effect();
+                }
+            }
+        }
+    }
+}

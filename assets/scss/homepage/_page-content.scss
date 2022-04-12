@@ -9,6 +9,9 @@
                 figure {
                     width: 935px;
                     height: 415px;
+                    @include reverse_breakpoint("large-pc") {
+                        width: auto;
+                    }
                 }
             }
             @at-root
@@ -78,6 +81,12 @@
                         @include pd_values(35%,36%);
                     }
                 }
+                @include reverse_breakpoint("large-pc") {
+                    width: 41.1%;
+                }
+                @include reverse_breakpoint("mini-ipad") {
+                    width: 80%;
+                }
             }
         }
         
@@ -131,5 +140,9 @@
                 }
             }
         }
+    }
+    @include reverse_breakpoint("mini-ipad") {
+        flex-direction: column;
+        row-gap: 10px;
     }
 }
