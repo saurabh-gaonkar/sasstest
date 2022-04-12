@@ -1,0 +1,23 @@
+.page-content {
+    @include flex_properties(normal,normal);
+        @at-root
+        &__taking-the-lead {
+            @at-root
+            &__video {
+                figure {
+                    width: 935px;
+                    height: 415px;
+                }
+            }
+            @at-root
+            &__play-video {
+                display: none;
+            }
+            @at-root
+            .play-button {
+                width: 124px;
+                height: 124px;
+            }
+        }
+      
+    }
