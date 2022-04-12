@@ -1,21 +1,37 @@
 header {
     @at-root
     .header-top {
-        @include pd_values(13px,0);
         background-color: map-get($colors,black_color);
         @at-root
-        .hamburger {
+        .hamburger,.cross {
             display: none;
+            color: map-get($colors,primary_color);
+            font-size: 26px;
+            text-indent: -9999px;
+            &::before {
+                @include font-icon("\f0c9",28px);
+                content: "\f0c9";
+                color: map-get($colors,primary_color);
+                cursor: pointer;
+            }
+            @include reverse_breakpoint("tablet") {
+                display: block;
+            }
         }
+          .cross::before {
+            content: "\f00d";
+          }
+          
         @at-root
         &__menus {
             width: 36%;
            & > ul {
                 @include flex_properties(space-between,center);
-                li {
-                        @include pd_values(0,5.2%);
+                & > li {
+                        @include pd_values(2.9%,5.2%);
+                        position: relative;
                         text-align: center;
-                    a {
+                  & > a {
                         color: map-get($colors,lightest-white);
                         font-size: map-get($font,font-xix);
                     }
@@ -26,10 +42,6 @@ header {
                     }
                     &:first-child {
                         @include mg-rule(right,2.5%);
-                        background-color: map-get($colors,red-color);
-                        & > a {
-                            letter-spacing: 1px;
-                        }
                     }
 
                     &:nth-child(2) {
@@ -40,19 +52,75 @@ header {
                         @include mg-rule(right,4.2%);
                         white-space: nowrap;
                     }
-
-                    ul {
-                        @include flex_properties(normal,normal);
+                    @at-root
+                    .dropdown-menus {
+                        @include pd_values(10%,20%);
+                        display: none;
                         flex-direction: column;
+                        position: absolute;
+                        top: 100%;
+                        background: map-get($colors,black_color);
                         li {
                             a {
+                                color: map-get($colors,lightest-white);
                                 font-size: 12px;
                                 white-space: nowrap;
                                 &::after {
                                     content: "";
                                 }
+                                &:hover {
+                                    color: map-get($colors,primary_color);
+                                }
                             }
                         }
+                    }
+
+                    &:hover {
+                        background-color: map-get($colors,red-color);
+                        & > a {
+                            color: map-get($colors,lighter-white);
+                        }
+                    }
+
+                    &:hover > .dropdown-menus {
+                        @include flex_properties(normal,normal);
+                    }
+                }
+              
+            }
+            @include reverse_breakpoint("tablet") {
+                display: none;
+            }
+        }
+         
+    }
+    @at-root
+    .header-bottom {
+        @include pd_values(1.3%,0);
+        .wrapper {
+            @include flex_properties(space-between,center);
+        }
+
+        @at-root
+        &__advertisement-feature {
+            font-weight: bold;
+            text-decoration: underline;
+            &::after {
+                @include font-iconafter("\f054",16px);
+                text-decoration: none;
+            }
+        }
+        @at-root
+        &__sponsors-logo {
+            @include flex_properties(space-between,center);
+            span {
+                font-weight: bold;
+            }
+            h1 {
+                a {
+                    img {
+                        width: 135px;
+                        height: 40px;
                     }
                 }
             }
