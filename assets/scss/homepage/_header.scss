@@ -10,7 +10,7 @@ header {
         @at-root
         &__menus {
             width: 36%;
-            ul {
+           & > ul {
                 @include flex_properties(space-between,center);
                 li {
                         @include pd_values(0,5.2%);
@@ -19,7 +19,7 @@ header {
                         color: map-get($colors,lightest-white);
                         font-size: map-get($font,font-xix);
                     }
-                    &:nth-of-type(2n) a::after {
+                    &:nth-of-type(2n) > a::after {
                         @include font-iconafter("\f107",20px);
                         @include mg-rule(left,2px);
                         vertical-align: middle;
@@ -39,6 +39,20 @@ header {
                     &:nth-child(3) {
                         @include mg-rule(right,4.2%);
                         white-space: nowrap;
+                    }
+
+                    ul {
+                        @include flex_properties(normal,normal);
+                        flex-direction: column;
+                        li {
+                            a {
+                                font-size: 12px;
+                                white-space: nowrap;
+                                &::after {
+                                    content: "";
+                                }
+                            }
+                        }
                     }
                 }
             }
