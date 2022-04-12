@@ -364,6 +364,7 @@ main {
       font-size: 36px; }
 
 .page-content {
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,6 +375,26 @@ main {
     height: 415px; }
   .page-content__taking-the-lead__play-video {
     display: none; }
-  .play-button {
+  .page-content__taking-the-lead__video {
+    padding: 6.2% 0;
+    position: relative;
+    background-color: #000; }
+  .page-content__taking-the-lead .play-button {
     width: 124px;
-    height: 124px; }
+    height: 124px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .page-content__taking-the-lead h2 {
+    padding: 0 1.8%;
+    margin-top: 55px;
+    color: #286D84;
+    font-size: 32px;
+    font-weight: bold; }
+  .page-content__taking-the-lead p {
+    padding: 0 1.8%;
+    margin-top: 38px;
+    font-size: 22px;
+    font-weight: bold; }

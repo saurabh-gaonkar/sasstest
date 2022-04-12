@@ -1,4 +1,5 @@
 .page-content {
+    @include mg-rule(top,15px);
     @include flex_properties(normal,normal);
         @at-root
         &__taking-the-lead {
@@ -13,10 +14,35 @@
             &__play-video {
                 display: none;
             }
-            @at-root
+
+            @at-root 
+            &__video {
+                @include pd_values(6.2%,0);
+                position: relative;
+                background-color: map-get($colors,black_color);
+            }
             .play-button {
                 width: 124px;
                 height: 124px;
+                position: absolute;
+                z-index: 1;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            h2 {
+                @include pd_values(0,1.8%);
+                @include mg-rule(top,55px);
+                color: map-get($colors,dark-green);
+                font-size: map-get($font,font-xxxii);
+                font-weight: bold;
+            }
+
+            p {
+                @include pd_values(0,1.8%);
+                @include mg-rule(top,38px);
+                font-size: map-get($font,font-xxii);
+                font-weight: bold;
             }
         }
       
