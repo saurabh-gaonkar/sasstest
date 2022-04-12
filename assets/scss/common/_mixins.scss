@@ -11,7 +11,7 @@
 }
 
 @mixin mg_values($t,$r,$b,$l) {
-    margin: $t,$r,$b,$l;
+    margin: $t $r $b $l;
 }
 
 @mixin pd-rule($dir,$val) {

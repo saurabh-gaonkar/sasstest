@@ -369,7 +369,8 @@ main {
   display: -ms-flexbox;
   display: flex;
   justify-content: normal;
-  align-items: normal; }
+  align-items: normal;
+  column-gap: 25px; }
   .page-content__taking-the-lead__video figure {
     width: 935px;
     height: 415px; }
@@ -386,7 +387,8 @@ main {
     z-index: 1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    cursor: pointer; }
   .page-content__taking-the-lead h2 {
     padding: 0 1.8%;
     margin-top: 55px;
@@ -397,4 +399,51 @@ main {
     padding: 0 1.8%;
     margin-top: 38px;
     font-size: 22px;
+    font-weight: bold;
+    line-height: 27px; }
+  .social {
+    width: 22.1%;
+    margin: 4.6% 1.8% 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .social li a {
+      text-indent: -9999px; }
+      .social li a::before {
+        content: "";
+        float: right;
+        font-family: "fontAwesome";
+        font-size: 30px;
+        text-indent: 0;
+        padding: 61% 100%;
+        display: block;
+        border-radius: 100%;
+        background-color: #bbbbbb;
+        color: #fff; }
+    .social li:nth-child(2) a::before {
+      content: "\f0e1";
+      padding: 40% 52%; }
+    .social li:nth-child(3) a::before {
+      content: "\f099";
+      padding: 40% 41%; }
+    .social li:nth-child(4) a::before {
+      content: "\f0e0";
+      padding: 35% 36%; }
+  .page-content__sidebar-content span {
+    margin-top: 12px;
+    display: block;
+    font-weight: bold; }
+  .page-content__sidebar-content__author {
+    width: 64px;
+    height: 21px;
+    margin-top: 12px; }
+  .page-content__sidebar-content a {
+    margin-top: 14px;
+    color: #4D8797;
+    font-size: 17px; }
+  .page-content__sidebar-content p {
+    margin-top: 18px;
+    font-size: 14px;
     font-weight: bold; }

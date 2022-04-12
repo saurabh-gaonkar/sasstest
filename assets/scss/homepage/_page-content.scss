@@ -1,6 +1,7 @@
 .page-content {
     @include mg-rule(top,15px);
     @include flex_properties(normal,normal);
+    column-gap: 25px;
         @at-root
         &__taking-the-lead {
             @at-root
@@ -29,6 +30,7 @@
                 top:50%;
                 left:50%;
                 transform: translate(-50%,-50%);
+                cursor: pointer;
             }
             h2 {
                 @include pd_values(0,1.8%);
@@ -43,7 +45,69 @@
                 @include mg-rule(top,38px);
                 font-size: map-get($font,font-xxii);
                 font-weight: bold;
+                line-height: 27px;
+            }
+
+            @at-root 
+            .social {
+                width: 22.1%;
+                @include mg_values(4.6%,1.8%,0,auto);
+                @include flex_properties(space-between,center);
+                li {
+                    a {
+                        text-indent: -9999px;
+                        &::before {
+                            @include font-icon("\f09a",30px);
+                            @include pd_values(61%,100%);
+                            display: block;
+                            border-radius: 100%;
+                            background-color: map-get($colors,icons-back);
+                            color: map-get($colors,primary_color);
+                        }
+                    }
+                    &:nth-child(2) a::before {
+                        content: "\f0e1";
+                        @include pd_values(40%,52%);
+                    }
+                    &:nth-child(3) a::before {
+                        content: "\f099";
+                        @include pd_values(40%,41%);
+                    }
+                    &:nth-child(4) a::before {
+                        content: "\f0e0";
+                        @include pd_values(35%,36%);
+                    }
+                }
             }
         }
-      
+        
+        @at-root
+        &__sidebar-content {
+
+            span {
+                @include mg-rule(top,12px);
+                display: block;
+                font-weight: bold;
+            }
+
+            @at-root
+            &__author {
+                width: 64px;
+                height: 21px;
+                @include mg-rule(top,12px);
+            }
+
+            a {
+                @include mg-rule(top,14px);
+                color: map-get($colors,light-green);
+                font-size: map-get($font,font-xvii);
+            }
+
+            p {
+                @include mg-rule(top,18px);
+                font-size: map-get($font,font-xiv);
+                font-weight: bold;
+            }
+    
+        }
     }
