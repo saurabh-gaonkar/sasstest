@@ -1,5 +1,6 @@
 footer {
-    @include pd_values(1.2%,0);
+    @include pd-rule(top,1.2%);
+    @include pd-rule(bottom,0.4%);
     background-color: map-get($colors,black_color );
     @at-root
     .footer-menus {

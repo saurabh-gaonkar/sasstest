@@ -577,7 +577,8 @@ main {
       row-gap: 10px; } }
 
 footer {
-  padding: 1.2% 0;
+  padding-top: 1.2%;
+  padding-bottom: 0.4%;
   background-color: #000; }
   .footer-menus {
     display: -webkit-box;
