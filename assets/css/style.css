@@ -452,7 +452,7 @@ main {
       .page-content__taking-the-lead__play-video video {
         width: 100%; }
     .page-content__taking-the-lead__video {
-      padding: 6.2% 0;
+      padding: 6.2% 0 6% 0;
       position: relative;
       background-color: #000; }
     .page-content__taking-the-lead .play-button {
@@ -541,10 +541,11 @@ main {
     row-gap: 28px; }
     .page-content__sidebar__content span {
       display: block;
+      color: rgba(0, 0, 0, 0.7);
       font-weight: bold; }
     .page-content__sidebar__content__author {
       width: 64px;
-      height: 21px;
+      height: 18px;
       margin-top: 12px; }
     .page-content__sidebar__content a {
       margin-top: 14px;
@@ -574,8 +575,8 @@ main {
     .page-content__sidebar__content__video-box {
       position: relative; }
       .page-content__sidebar__content__video-box .play-button {
-        width: 60px;
-        height: 60px;
+        width: 59px;
+        height: 59px;
         position: absolute;
         top: 50%;
         left: 50%;

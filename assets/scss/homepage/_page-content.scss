@@ -33,7 +33,7 @@
 
             @at-root 
             &__video {
-                @include pd_values(6.2%,0);
+                @include pd_values4(6.2%,0,6%,0);
                 position: relative;
                 background-color: map-get($colors,black_color);
             }
@@ -132,13 +132,14 @@
 
             span {
                 display: block;
+                color: map-get($colors,light-black);
                 font-weight: bold;
             }
 
             @at-root
             &__author {
                 width: 64px;
-                height: 21px;
+                height: 18px;
                 @include mg-rule(top,12px);
             }
 
@@ -174,8 +175,8 @@
             &__video-box {
                 position: relative;
                 .play-button {
-                    width: 60px;
-                    height: 60px;
+                    width: 59px;
+                    height: 59px;
                     position: absolute;
                     top: 50%;
                     left: 50%;
