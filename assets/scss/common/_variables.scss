@@ -21,12 +21,14 @@ $colors: (primary_color: #fff,
     light-gray: #C3C3C3,
     light-white: #FCFCFC,
     lighter-white: #CCCCCC,
-    lightest-white: #DCDCDC,
+    lightest-white: rgba(255,255,255,0.4),
     almost-white: #FAFAFA,
     faint-green: #90B045,
     faint-gray: #ACACAC,
     transparent:transparent,
-    parrot-color: #8EB53E);
+    parrot-color: #8EB53E,
+    red-color: #ff0000
+);
 // font
 $font_family: (icon_font: "fontAwesome", );
 

@@ -1,0 +1,47 @@
+header {
+    @at-root
+    .header-top {
+        @include pd_values(13px,0);
+        background-color: map-get($colors,black_color);
+        @at-root
+        .hamburger {
+            display: none;
+        }
+        @at-root
+        &__menus {
+            width: 36%;
+            ul {
+                @include flex_properties(space-between,center);
+                li {
+                        @include pd_values(0,5.2%);
+                        text-align: center;
+                    a {
+                        color: map-get($colors,lightest-white);
+                        font-size: map-get($font,font-xix);
+                    }
+                    &:nth-of-type(2n) a::after {
+                        @include font-iconafter("\f107",20px);
+                        @include mg-rule(left,2px);
+                        vertical-align: middle;
+                    }
+                    &:first-child {
+                        @include mg-rule(right,2.5%);
+                        background-color: map-get($colors,red-color);
+                        & > a {
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include mg-rule(right,1.2%);
+                    }
+
+                    &:nth-child(3) {
+                        @include mg-rule(right,4.2%);
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

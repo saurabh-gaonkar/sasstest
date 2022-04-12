@@ -18,8 +18,8 @@
     padding-#{$dir}: $val;
 }
 
-@mixin pd_values($t,$r,$b,$l) {
-    padding: $t,$r,$b,$l;
+@mixin pd_values($tb,$lr) {
+    padding: $tb $lr;
 }
 
 @mixin font-icon($icon-code, $icon-size) {

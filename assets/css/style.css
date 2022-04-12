@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -195,5 +196,41 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1519px;
-  width: 88%;
+  width: 82.1%;
   margin: 0 auto; }
+
+.header-top {
+  padding: 13px 0;
+  background-color: #000; }
+  .hamburger {
+    display: none; }
+  .header-top__menus {
+    width: 36%; }
+    .header-top__menus ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header-top__menus ul li {
+        padding: 0 5.2%;
+        text-align: center; }
+        .header-top__menus ul li a {
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 19px; }
+        .header-top__menus ul li:nth-of-type(2n) a::after {
+          content: "";
+          font-family: "fontAwesome";
+          font-size: 20px;
+          margin-left: 2px;
+          vertical-align: middle; }
+        .header-top__menus ul li:first-child {
+          margin-right: 2.5%;
+          background-color: #ff0000; }
+          .header-top__menus ul li:first-child > a {
+            letter-spacing: 1px; }
+        .header-top__menus ul li:nth-child(2) {
+          margin-right: 1.2%; }
+        .header-top__menus ul li:nth-child(3) {
+          margin-right: 4.2%;
+          white-space: nowrap; }
