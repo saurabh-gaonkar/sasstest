@@ -421,7 +421,10 @@ main {
     z-index: 3;
     top: 50%;
     left: 50%;
+    display: none;
     transform: translate(-50%, -50%); }
+    .page-content__taking-the-lead__play-video video {
+      width: 100%; }
   .page-content__taking-the-lead__video {
     padding: 6.2% 0;
     position: relative;
@@ -497,6 +500,7 @@ main {
     z-index: 2;
     top: 0;
     left: 0;
+    display: none;
     background-color: rgba(0, 0, 0, 0.7); }
   .page-content__sidebar__content span {
     margin-top: 12px;
